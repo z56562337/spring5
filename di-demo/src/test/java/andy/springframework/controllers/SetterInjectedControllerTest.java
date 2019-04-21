@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import andy.springframework.services.GreetingServicelmpl;
+import andy.springframework.services.GreetingServiceImpl;
 
 public class SetterInjectedControllerTest {
 	
@@ -14,11 +14,11 @@ public class SetterInjectedControllerTest {
     @Before
     public void setUp() throws Exception{
         this.setterInjectedController = new SetterInjectedController();
-        this.setterInjectedController.setGreetingService(new GreetingServicelmpl());
+        this.setterInjectedController.setGreetingService(new GreetingServiceImpl());
     }
     
     @Test
     public void testGreeting() throws Exception {
-        assertEquals(GreetingServicelmpl.HELLO_GURUS, setterInjectedController.sayHello());
+        assertEquals(GreetingServiceImpl.HELLO_GURUS, setterInjectedController.sayHello());
     }
 }

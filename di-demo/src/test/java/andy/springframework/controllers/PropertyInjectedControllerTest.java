@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import andy.springframework.controllers.PropertyInjectedController;
-import andy.springframework.services.GreetingServicelmpl;
+import andy.springframework.services.GreetingServiceImpl;
 
 public class PropertyInjectedControllerTest {
 	
@@ -15,11 +15,11 @@ public class PropertyInjectedControllerTest {
 	@Before
 	public void setUp() throws Exception{
 		this.propertyInjectedController = new PropertyInjectedController();
-		this.propertyInjectedController.greetingService = new GreetingServicelmpl();
+		this.propertyInjectedController.greetingServiceImpl = new GreetingServiceImpl();
 	}
 	
 	@Test
 	public void testGreeting() throws Exception {
-		assertEquals(GreetingServicelmpl.HELLO_GURUS, propertyInjectedController.sayHello());
+		assertEquals(GreetingServiceImpl.HELLO_GURUS, propertyInjectedController.sayHello());
 	}
 }
